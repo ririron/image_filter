@@ -8,8 +8,9 @@
 
 int filter[3][3] = 0;
 
-void inputLut(unsigned char *lut,unsigned char input);
+void average_filter() {
 
+}
 
 int main(int argc, char *argv[])
 {
@@ -50,10 +51,4 @@ int main(int argc, char *argv[])
         printf("コピー先ファイル%sに保存できませんでした\n",argv[2]);
       }
   }
-}
-
-void inputLut(unsigned char *lut,unsigned char input){
-  double gain = -7.0;
-  double index = gain * (((double)input / zm) - 0.5) ;
-  lut[input] = zm * (1.0 / (1.0 + exp(index)));
 }
